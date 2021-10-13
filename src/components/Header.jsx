@@ -24,10 +24,10 @@ export default class Header extends React.Component {
     const { loading, userName } = this.state;
     return (
       <header data-testid="header-component">
-        { !loading ? <h2 data-testid="header-user-name">{ userName }</h2> : <Loading /> }
-        <Link to="/search" data-testid="link-to-search">Search</Link>
-        <Link to="/favorites" data-testid="link-to-favorites">Favorites</Link>
-        <Link to="/profile" data-testid="link-to-profile">Profile</Link>
+        { !loading ? <h3 data-testid="header-user-name">{ userName }</h3> : <Loading /> }
+        <Link to="/search" data-testid="link-to-search">Pesquisar</Link>
+        <Link to="/favorites" data-testid="link-to-favorites">Favoritos</Link>
+        <Link to="/profile" data-testid="link-to-profile">Perfil</Link>
       </header>
     );
   }
