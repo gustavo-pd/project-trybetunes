@@ -8,14 +8,14 @@ export default class Header extends React.Component {
 
     this.state = {
       userName: '',
-      loading: false,
+      loading: true,
     };
   }
 
   componentDidMount() {
     getUser().then(({ name: userName }) => this.setState({
       userName,
-      loading: true,
+      loading: false,
     }));
   }
 
@@ -23,9 +23,8 @@ export default class Header extends React.Component {
     const { loading, userName } = this.state;
     return (
       <header data-testid="header-component">
-        Header do teu pai
         <h2 data-testid="header-user-name">
-          { !loading ? userName.name : <Loading />}
+          { !loading ? userName : <Loading />}
         </h2>
       </header>
     );
