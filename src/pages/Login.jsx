@@ -34,8 +34,8 @@ export default class Login extends React.Component {
   render() {
     const { loginName, loadingPage, searchPage } = this.state;
     const n = 3;
-    if (searchPage) return <Redirect to="/search" />;
-    if (loadingPage) return <Loading />;
+    if (searchPage === true) return <Redirect to="/search" />;
+    if (loadingPage === true) return <Loading />;
 
     return (
       <div data-testid="page-login">
