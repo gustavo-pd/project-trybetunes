@@ -40,14 +40,16 @@ export default class Profile extends React.Component {
         <Header />
         {loading && <Loading />}
         <section>
-          <img data-testid="profile-image" src={ image } alt={ name } />
-          <Link to="/profile/edit">Editar perfil</Link>
-          <p><strong>Nome do usuário:</strong></p>
-          <p>{ name }</p>
-          <p><strong>Email:</strong></p>
-          <p>{ email }</p>
-          <p><strong>Descrição:</strong></p>
-          <p>{ description }</p>
+          <div>
+            <img data-testid="profile-image" src={ image } alt={ name } />
+            <Link to="/profile/edit">Editar perfil</Link>
+            <p><strong>Nome do usuário:</strong></p>
+            <p>{ name }</p>
+            <p><strong>Email:</strong></p>
+            <p>{ email }</p>
+            <p><strong>Descrição:</strong></p>
+            <p>{ description }</p>
+          </div>
         </section>
       </div>
     );
