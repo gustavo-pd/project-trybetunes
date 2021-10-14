@@ -10,7 +10,7 @@ export default class Album extends React.Component {
     this.state = {
       album: '',
       band: '',
-      musics: '',
+      musics: [],
     };
   }
 
@@ -35,7 +35,8 @@ export default class Album extends React.Component {
         <Header />
         <p data-testid="artist-name">{`${band}`}</p>
         <p data-testid="album-name">{`${album}`}</p>
-        <MusicCard musics={ musics } />
+        { musics.slice(1)
+          .map((music, i) => <MusicCard music={ music } key={ i } />) }
       </div>
     );
   }
