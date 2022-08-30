@@ -50,6 +50,8 @@ Esta aplicação foi desenvolvida para ser capaz de:
   - Ver o perfil da pessoa logada;
   - Editar o perfil da pessoa logada;
 
+OBS: o Css dessa aplicação ainda não foi implementado, apenas as funcionalidades.
+
 <img src="./public/requisito7.gif" alt="Trybetunes Homepage">
 
 
